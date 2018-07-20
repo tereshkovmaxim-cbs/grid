@@ -1,0 +1,33 @@
+.about {
+  background-color: lighten($color-secondary, 16);
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-left {
+  padding: $size-root*6;
+  padding-bottom: $size-root;
+  border-right: 1px solid black;
+
+  .headline {
+    font: bold $size-root*2.7 $font-primary;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    font: $size-root*1.6 $font-primary;
+    margin: $size-root 0;
+  }
+}
+
+.about-right {
+  padding: $size-root*4;
+
+  .about-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,104 @@
+body, h1, h2, h3, a {
+  margin: 0;
+  padding: 0; }
+
+.grid {
+  display: grid; }
+
+.headline {
+  font: bold 2em sans-serif;
+  margin: 20px 0; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.text {
+  font: 16px sans-serif; }
+
+.header {
+  height: 100vh;
+  align-content: center;
+  text-align: center;
+  color: #fff; }
+  .header .button {
+    margin: 10px;
+    width: 130px; }
+    .header .button-html {
+      background-color: #f09b00;
+      box-shadow: 0 0 18px #ffb124; }
+      .header .button-html:hover {
+        background-color: #d78b00;
+        box-shadow: 0 0 18px white; }
+    .header .button-css {
+      background-color: #4d4dad;
+      box-shadow: 0 0 18px #6e6ebf; }
+      .header .button-css:hover {
+        background-color: #45459b;
+        box-shadow: 0 0 18px white; }
+    .header .button-js {
+      background-color: #285828;
+      box-shadow: 0 0 18px #387b38; }
+      .header .button-js:hover {
+        background-color: #204620;
+        box-shadow: 0 0 18px white; }
+
+.header-background {
+  background-image: url(../img/header.jpg);
+  background-size: cover;
+  background-position: center; }
+  .header-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #8c8c8c;
+    opacity: .5; }
+
+.header-headline {
+  font-family: Oswald;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #fff;
+  z-index: 1; }
+
+.button-group {
+  z-index: 1; }
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 50px;
+  background-color: #ccc;
+  font: 20px sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer; }
+
+.about {
+  background-color: whitesmoke; }
+  .about .container {
+    grid-template-columns: 1fr 1fr; }
+
+.about-left {
+  padding: 60px;
+  padding-bottom: 10px;
+  border-right: 1px solid black; }
+  .about-left .headline {
+    font: bold 27px Oswald;
+    margin-bottom: 40px; }
+  .about-left .text {
+    font: 16px Oswald;
+    margin: 10px 0; }
+
+.about-right {
+  padding: 40px; }
+  .about-right .about-image {
+    display: block;
+    width: 100%;
+    height: auto; }

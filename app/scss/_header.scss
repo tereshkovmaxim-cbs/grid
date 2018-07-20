@@ -1,0 +1,79 @@
+.header {
+  height: $size-height + vh;
+  align-content: $position;
+  text-align: $position;
+  color: $color-primary;
+
+  .button {
+    margin: $size-root;
+    width: $size-root*13;
+
+    &-html {
+      background-color: map-get($color-header-button, orange);
+      box-shadow: 0 0 18px lighten(map-get($color-header-button, orange), 10);
+
+      &:hover {
+        background-color: darken(map-get($color-header-button, orange), 5);
+        box-shadow: 0 0 18px lighten($color-primary, 10);
+      }
+    }
+    &-css {
+      background-color: map-get($color-header-button, blue);
+      box-shadow: 0 0 18px lighten(map-get($color-header-button, blue), 10);
+
+      &:hover {
+        background-color: darken(map-get($color-header-button, blue), 5);
+        box-shadow: 0 0 18px lighten($color-primary, 10);
+      }
+    }
+    &-js {
+      background-color: map-get($color-header-button, green);
+      box-shadow: 0 0 18px lighten(map-get($color-header-button, green), 10);
+
+      &:hover {
+        background-color: darken(map-get($color-header-button, green), 5);
+        box-shadow: 0 0 18px lighten($color-primary, 10);
+      }
+    }
+  }
+}
+
+.header-background {
+  background-image: url(../img/header.jpg);
+  background-size:cover;
+  background-position: $position;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: darken($color-secondary, 25);
+    opacity: .5;
+  }
+}
+
+.header-headline {
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-size: $size-root*6;
+  color: $color-primary;
+  z-index: 1;
+}
+.button-group {
+  z-index: 1;
+}
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 50px;
+  background-color: $color-secondary;
+  font: $size-root*2 $font-secondary;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-primary;
+  cursor: pointer;
+}
