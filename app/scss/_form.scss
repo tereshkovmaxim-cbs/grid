@@ -1,0 +1,31 @@
+.form-subs {
+  background: darken($color-secondary, 50);
+}
+
+.form {
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  padding: $size-root*4 0;
+
+  &-element{
+    border: none;
+    background-color: darken($color-primary, 40);
+    font: italic $size-root*2 $font-secondary;
+    padding: $size-root*3 $size-root;
+    transition: all .5s ease;
+
+    &:focus {
+      background-color: $color-primary;
+      outline: none;
+    }
+  }
+
+  &-button {
+    padding: $size-root*3 $size-root*6;
+    background-color: map-get($color-header-button, blue);
+
+    &:hover {
+      box-shadow: 0 0 8px $color-primary;
+    }
+  }
+}

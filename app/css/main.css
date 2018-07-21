@@ -102,3 +102,25 @@ body, h1, h2, h3, a {
     display: block;
     width: 100%;
     height: auto; }
+
+.form-subs {
+  background: #4d4d4d; }
+
+.form {
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+  padding: 40px 0; }
+  .form-element {
+    border: none;
+    background-color: #999999;
+    font: italic 20px sans-serif;
+    padding: 30px 10px;
+    transition: all .5s ease; }
+    .form-element:focus {
+      background-color: #fff;
+      outline: none; }
+  .form-button {
+    padding: 30px 60px;
+    background-color: #4d4dad; }
+    .form-button:hover {
+      box-shadow: 0 0 8px #fff; }
