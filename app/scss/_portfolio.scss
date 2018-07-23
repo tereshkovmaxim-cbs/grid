@@ -1,0 +1,72 @@
+.portfolio {
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $size-root;
+  padding: $size-root;
+
+  &-item {
+    position: relative;
+    min-height: $size-height/4 + vh;
+    background-size: cover;
+    background-position: $position;
+    padding: $size-root*2;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    color: $color-primary;
+    transition: all 1s ease;
+
+    span {
+      font-family: $font-secondary;
+      font-size: $size-root*3;
+      z-index: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: darken($color-secondary, 20);
+      opacity: .4;
+      transition: opacity 1s ease;
+    }
+    &:hover {
+      color: map-get($color-header-button, blue);
+      &::before{
+        opacity: .8;
+      }
+    }
+  }
+
+  &-item:nth-child(1) {
+    grid-column: 1/3;
+    background-image: url(../img/1.jpg);
+  }
+  &-item:nth-child(2) {
+    background-image: url(../img/2.jpg);
+  }
+  &-item:nth-child(3) {
+    background-image: url(../img/3.jpg);
+  }
+  &-item:nth-child(4) {
+    grid-column: 2/4;
+    background-image: url(../img/4.jpg);
+  }
+  &-item:nth-child(5) {
+    grid-column: 1/3;
+    grid-row: 3/5;
+    background-image: url(../img/5.png);
+  }
+  &-item:nth-child(6) {
+    background-image: url(../img/6.png);
+  }
+  &-item:nth-child(7) {
+    background-image: url(../img/7.jpg);
+  }
+  &-item:nth-child(8) {
+    grid-column: 1/4;
+    background-image: url(../img/8.jpg);
+  }
+}
